@@ -1,0 +1,122 @@
+/* src/pages/Register.css */
+
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Úprava stylu pro PhoneInput */
+.react-tel-input {
+  width: 100%;
+  position: relative;
+}
+
+.react-tel-input input {
+  width: 100%;
+  padding-left: 60px; /* Vytvoří více místa pro vlajku a předvolbu */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.react-tel-input .flag-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50px; /* Nastaví šířku pro vlaječku a dropdown předvolby, aby se nepřekrývaly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid #ccc; /* Oddělení vlajky a textového pole */
+}
+
+.react-tel-input .selected-flag {
+  padding: 0;
+}
+
+.react-tel-input .flag {
+  margin-right: 4px; /* Mezera mezi vlajkou a předvolbou */
+}
+
+.react-tel-input .country-list {
+  text-align: left;
+}
+
+.react-tel-input .country-list .country {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.react-tel-input .country-list .country-name {
+  margin-left: 8px; /* Mezera mezi vlajkou a textem státu */
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-container form div {
+  margin-bottom: 15px;
+}
+
+.register-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.register-container input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.register-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Styl pro chybovou zprávu */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+
+  
