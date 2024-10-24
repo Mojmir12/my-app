@@ -1,35 +1,25 @@
 // src/pages/Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PhoneInput from 'react-phone-input-2';  // Přidáváme knihovnu PhoneInput
+import 'react-phone-input-2/lib/style.css';    // Import stylů pro PhoneInput
 import './Login.css';
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [phoneNumberError, setPhoneNumberError] = useState('');
   const navigate = useNavigate();
 
-  const validatePhoneNumber = (phoneNumber) => {
-    const phoneNumberRegex = /^\d{9,}$/; // Jednoduchá validace, aby obsahovalo minimálně 9 číslic
-    return phoneNumberRegex.test(phoneNumber);
-  };
-
-  const handlePhoneNumberChange = (e) => {
-    setPhoneNumber(e.target.value);
-    if (!validatePhoneNumber(e.target.value)) {
-      setPhoneNumberError('Invalid phone number format');
-    } else {
-      setPhoneNumberError('');
-    }
+  const handlePhoneNumberChange = (value) => {
+    setPhoneNumber(value);
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!validatePhoneNumber(phoneNumber)) {
-      setError('Please enter a valid phone number.');
-      return;
-    }
+
+    // Odstraníme mezery z telefonního čísla
+    const formattedPhoneNumber = phoneNumber.replace(/\s+/g, '');
 
     try {
       const response = await fetch('http://localhost:3001/api/login', {
@@ -37,7 +27,7 @@ function Login() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ phoneNumber, password }),
+        body: JSON.stringify({ phoneNumber: formattedPhoneNumber, password }),
       });
 
       if (response.ok) {
@@ -60,13 +50,14 @@ function Login() {
       <form onSubmit={handleLogin}>
         <div>
           <label>Phone Number:</label>
-          <input
-            type="text"
+          <PhoneInput
+            country={'cz'}         // Stejné nastavení jako v Register.js
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
-            required
+            placeholder="Enter phone number"
+            disableCountryCode={false}
+            autoFormat={false}
           />
-          {phoneNumberError && <p className="error-message">{phoneNumberError}</p>}
         </div>
         <div>
           <label>Password:</label>
@@ -78,7 +69,7 @@ function Login() {
           />
         </div>
         {error && <p className="error-message">{error}</p>}
-        <button type="submit" disabled={phoneNumberError}>
+        <button type="submit">
           Login
         </button>
       </form>
@@ -87,6 +78,8 @@ function Login() {
 }
 
 export default Login;
+
+
 
 
 

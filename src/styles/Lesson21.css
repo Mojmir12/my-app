@@ -1,0 +1,37 @@
+.lesson-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lesson-container h2 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .lesson-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .lesson-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .lesson-container ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .lesson-container video {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+  

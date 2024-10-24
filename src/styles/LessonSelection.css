@@ -1,0 +1,24 @@
+.lesson-selection-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .lesson-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lesson-list li {
+    margin-bottom: 15px;
+  }
+  
+  .lesson-list li a {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .lesson-list li a:hover {
+    text-decoration: underline;
+  }
+  

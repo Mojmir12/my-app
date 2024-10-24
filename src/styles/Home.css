@@ -1,0 +1,24 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-container h2 {
+  color: #333;
+}
+
+.home-container p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Přidání stylů pro obrázky */
+.image-container img {
+  max-width: 100%;   /* Obrázek se nebude roztahovat nad šířku rodičovského prvku */
+  height: auto;      /* Výška se automaticky přizpůsobí šířce */
+  display: block;    /* Zajistí, že obrázek bude zobrazen jako blokový prvek */
+  margin: 0 auto;    /* Centrovat obrázek */
+}
+
+  
+  

@@ -1,0 +1,42 @@
+/* src/styles/LessonsOverview.css */
+.lessons-overview-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.lessons-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lessons-list li {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lessons-list h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.lessons-list p {
+  font-size: 1em;
+  color: #666;
+}
+
+.lessons-list a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.lessons-list a:hover {
+  text-decoration: underline;
+}
+
+  

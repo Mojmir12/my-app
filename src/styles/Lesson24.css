@@ -1,0 +1,26 @@
+.lesson-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  img {
+    max-width: 600px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  h2, h3 {
+    color: #333;
+    text-align: center;
+  }
+  

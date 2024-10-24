@@ -1,0 +1,36 @@
+.lesson-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lesson-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .lesson-container img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+  }
+  
+  .lesson-container h3 {
+    color: #0056b3;
+    margin-top: 25px;
+  }
+  
+  .lesson-container p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  
